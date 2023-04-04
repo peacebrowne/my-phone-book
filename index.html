@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My Phonebook</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main class="container">
+			<button class="new-contact">➕ Add Contact</button>
+			<section class="contacts-container">
+				<input class="search-box" placeholder="Search for a contact" />
+				<ul class="contacts-list">
+					<li class="list-item">
+						<span class="list-image">
+							<img height="200" src="./avatar2.png" />
+						</span>
+						<span class="list-info">
+							<p class="list-name">Blama Doe</p>
+							<span class="list-email"> blama.doe@gmail.com</span>
+						</span>
+						<span class="list-actions">
+							<span class="edit-item">✏️</span>
+							<span class="delete-item">❌</span>
+						</span>
+					</li>
+					<li class="list-item">
+						<span class="list-image">
+							<img height="200" src="./avatar2.png" />
+						</span>
+						<span class="list-info">
+							<p class="list-name">Blama Doe</p>
+							<span class="list-email"> blama.doe@gmail.com</span>
+						</span>
+						<span class="list-actions">
+							<span class="edit-item">✏️</span>
+							<span class="delete-item">❌</span>
+						</span>
+					</li>
+				</ul>
+			</section>
+			<section class="form-container hidden">
+				<input
+					type="file"
+					accept="image/png, image/jpg, image/gif, image/jpeg"
+				/>
+				<input type="text" required placeholder="Blama Doe" />
+				<input required type="email" placeholder="john@example.com" />
+				<button type="button">Create Contact</button>
+			</section>
+		</main>
+		<script src="./app.js"></script>
+	</body>
+</html>
