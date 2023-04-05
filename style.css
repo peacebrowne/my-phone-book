@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins400,600,800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 *,
 *::after,
 *::before{
 	margin: 0;
 	padding: 0;
-	font-family: "Poppins", sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 :root {
@@ -42,7 +42,7 @@ button{
 
 input{
 	outline: none;
-	border: none;
+	border: 1px solid #d1d5db;
 	background-color: #D0D0D7;
 }
 
@@ -71,7 +71,7 @@ ul{
 .list-item{
 	list-style: none;
 	display: flex;
-	border-top: 0.5px solid var(--card-bg-color-dark) ;
+	border-top: 0.5px solid #d1d5db;
 	padding: 0.5rem 0;
 }
 
@@ -137,7 +137,6 @@ ul{
 
 .contact-form input{
 	margin: 0.5rem 0;
-	border: 1px solid #d1d5db;
 	padding: 0.9rem 1rem;
 	font-size: small;
 	border-radius: 5px;
