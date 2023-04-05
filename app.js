@@ -19,6 +19,8 @@ const add_todos_btn = find_element('.new-contact')
 const search = find_element('.search-box')
 const main = find_element('main')
 
+let btn_name = 'save'
+
 document.addEventListener('click', event => {
     const target = event.target
     const targetClass = Array.from(target.classList)
@@ -29,9 +31,19 @@ document.addEventListener('click', event => {
 })
 
 
+/**
+ * Swithes between contact list section and add contact section and changes the button name
+ * between "save" and "add contact" depending on the visible section
+ * @param {*} element - HTML element
+ * @returns {void}
+ */
 const switch_sections = element => {
 
     element.nextElementSibling.classList.toggle('hidden')
     element.nextElementSibling.nextElementSibling.classList.toggle('hidden')
+
+    element.textContent === '➕ Add Contact'
+        ? element.textContent = 'Close Form'
+        : element.textContent = '➕ Add Contact'
     
 }

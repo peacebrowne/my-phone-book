@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins400,600,800&display=swap");
 *,
 *::after,
-*::before {
+*::before{
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-	font-family: "Poppins", serif;
+	font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -19,123 +18,140 @@ body {
 	background-color: var(--app-bg-color);
 }
 
-.container {
-	border: 2px solid red;
-	background-color: var(--card-bg-color-white);
-	width: 92%;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	padding: 15px;
-	border: 1px solid var(--color-light-gray);
-	border-radius: 10px;
-	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-	margin-top: 10%;
-	margin-bottom: 10%;
+header{
+	padding: 1rem;
+	text-align: center;
 }
 
-.container .new-contact {
-	background-color: var(--color-light-gray);
-	padding: 5px;
-	width: 10em;
-	border: 1px solid #d1d5db;
-	border-radius: 5px;
-	cursor: pointer;
-	margin-left: auto;
+header h1{
+	font-size: 3rem;
+	color: var(--card-bg-color-dark);
+	font-weight: 400;
 }
 
-/* List styles */
-.contacts-container {
-	display: flex;
-	flex-direction: column;
-	margin-top: 20px;
-}
-
-.hidden {
-	display: none;
-}
-
-.contacts-container .search-box {
-	padding: 10px;
-	border: 1px solid #d1d5db;
-	border-radius: 5px;
-	margin-top: 15px;
-	margin-bottom: 20px;
-	background-color: var(--color-light-gray);
-}
-
-.contacts-container .contacts-list {
-	list-style: none;
-}
-
-.contacts-list .list-item {
-	padding: 5px 0;
-	border-bottom: 1px solid #dcdcdc;
-	display: flex;
-}
-
-.list-item .list-info {
+main{
+	padding: 2rem;
+	/* background-color: blue; */
+	height: 79vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-left: 10px;
-	font-size: 15px;
 }
 
-.list-item .list-email {
-	color: #6b7280;
+button{
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 5px;
 }
 
-.list-item .list-actions {
-	margin-left: auto;
-	align-self: center;
+input{
+	outline: none;
+	border: none;
+	background-color: #D0D0D7;
 }
 
-.list-actions .delete-item {
-	padding-left: 10px;
-}
-
-.delete-item,
-.edit-item {
-	cursor: pointer;
-	font-size: 1.2em;
-}
-
-.list-item img {
-	height: 4rem;
-	border-radius: 50%;
-}
-
-/* Form Styles */
-.form-container {
+section{
+	width: 90%;
 	display: flex;
-	flex-direction: column;
-	margin-top: 20px;
+	padding: 1rem;
+	margin: 0.5rem auto;
+	background-color: white;
 }
 
-.form-container.hidden {
+/* SWITCHES STYLE */
+.switches{
+	justify-content: space-between;
+}
+
+/* CONTACT LIST */
+.contact-list{
+	align-items: center;
 	display: none;
 }
 
-.form-container input {
-	padding: 10px;
+ul{
+	width: 100%;
+}
+
+.list-item{
+	list-style: none;
+	display: flex;
+	border-top: 0.5px solid var(--card-bg-color-dark) ;
+	padding: 0.5rem 0;
+}
+
+.list-item span{
+	margin-right: 0.5rem;
+}
+
+.list-image{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.list-image img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.list-info{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.list-info p{
+	font-size: small;
+}
+
+.list-email{
+	color: var(--card-bg-color-dark);
+	font-size: x-small !important;
+}
+
+.list-actions{
+	margin-left: auto !important;
+	display: flex;
+	align-items: flex-end;
+}
+
+
+/* SEARCH BOX */
+.search-box {
+	display: none;
+}
+
+.search-box input{
+	padding: 0.5rem 1rem;
+	width: 100%;
+	font-size: x-small;
+}
+
+/* CONTACT FORM */
+.contact-form{
+	display: none;
+}
+
+.contact-form form{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.contact-form input{
+	margin: 0.5rem 0;
 	border: 1px solid #d1d5db;
+	padding: 0.9rem 1rem;
+	font-size: small;
 	border-radius: 5px;
-	margin: 5px 0;
-	background-color: var(--color-light-gray);
 }
 
-.form-container input:first-child {
-	cursor: pointer;
-}
-
-.form-container button {
+.contact-form button{
+	margin: 0.5rem 0;
+	padding: 0.8rem 1rem;
 	background-color: var(--app-bg-color);
-	padding: 10px;
-	border: 1px solid #d1d5db;
-	border-radius: 5px;
-	cursor: pointer;
-	color: var(--card-bg-color-white);
-	font-size: 1em;
-	margin-top: 5px;
+	color: white;
+	font-weight: 600;
 }
