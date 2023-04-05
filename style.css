@@ -29,10 +29,15 @@ header h1{
 	font-weight: 400;
 }
 
-main{
-	padding: 2rem;
-	height: 79vh;
+main,
+footer{
+	padding: 1rem;
+	background-color: white;
+	width: 85%;
+	margin: 0 auto;
+	border-radius: 10px;
 }
+
 
 button{
 	padding: 0.5rem 1rem;
@@ -43,20 +48,19 @@ button{
 input{
 	outline: none;
 	border: 1px solid #d1d5db;
-	background-color: #D0D0D7;
+	background-color: var(--color-light-gray);
 }
 
 section{
-	width: 90%;
 	display: flex;
 	padding: 1rem;
-	margin: 0.5rem auto;
-	background-color: white;
+	margin: 0 auto;
 }
 
 /* SWITCHES STYLE */
 .switches{
 	justify-content: space-between;
+	padding-bottom: 0;
 }
 
 /* CONTACT LIST */
@@ -113,21 +117,16 @@ ul{
 }
 
 
-/* SEARCH BOX */
-.search-box {
-	display: none;
-}
 
+/* SEARCH BOX */
 .search-box input{
-	padding: 0.5rem 1rem;
+	padding: 0.7rem 1rem;
 	width: 100%;
+	border-radius: 5px;
 	font-size: x-small;
 }
 
 /* CONTACT FORM */
-.contact-form{
-	display: none;
-}
 
 .contact-form form{
 	display: flex;
@@ -148,4 +147,12 @@ ul{
 	background-color: var(--app-bg-color);
 	color: white;
 	font-weight: 600;
+}
+
+.hidden{
+	display: none !important;
+}
+
+footer{
+	background-color: var(--app-bg-color);
 }

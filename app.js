@@ -25,7 +25,7 @@ document.addEventListener('click', event => {
     const target = event.target
     const targetClass = Array.from(target.classList)
 
-    if(targetClass.includes('new-contact')){
+    if(targetClass.includes('add-contact-btn')){
         switch_sections(target)
     }
 })
@@ -39,11 +39,18 @@ document.addEventListener('click', event => {
  */
 const switch_sections = element => {
 
-    element.nextElementSibling.classList.toggle('hidden')
-    element.nextElementSibling.nextElementSibling.classList.toggle('hidden')
+    const searchBox = element.closest('main').children[1];
+    const constactList = element.closest('main').children[2];
+    const constactForm = element.closest('main').children[3];
+    const pagination = element.closest('main').nextElementSibling;
 
-    element.textContent === '➕ Add Contact'
-        ? element.textContent = 'Close Form'
-        : element.textContent = '➕ Add Contact'
+    searchBox.classList.toggle('hidden')
+    constactList.classList.toggle('hidden')
+    constactForm.classList.toggle('hidden')
+    pagination.classList.toggle('hidden')
+
+    element.innerText === '➕ Add Contact'
+        ? element.innerText = 'Close Form'
+        : element.innerText = '➕ Add Contact'
     
 }
